@@ -46,7 +46,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Grid container spacing={3} justify="center">
         <Grid item xs={2}>
-          <div style={{ maxWidth: `100px`, marginBottom: `1.45rem` }}>
+          <div style={{ maxWidth: `400px`, marginBottom: `1.45rem` }}>
             <Image />
           </div>
         </Grid>

@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-
 import { Link } from 'gatsby'
-
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
@@ -21,9 +19,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
-
 const drawerWidth = 240
-
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -33,7 +29,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'linear-gradient(to right,  #663399, #5B72FF)',
+    background: 'linear-gradient(to right,  #768de6, #9ed691)',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -80,21 +76,16 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 0,
   },
 }))
-
 const Header = ({ siteTitle }) => {
   const classes = useStyles()
-
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)
-
   function handleDrawerOpen() {
     setOpen(true)
   }
-
   function handleDrawerClose() {
     setOpen(false)
   }
-
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -161,13 +152,10 @@ const Header = ({ siteTitle }) => {
     </div>
   )
 }
-
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
-
 Header.defaultProps = {
   siteTitle: ``,
 }
-
 export default Header
