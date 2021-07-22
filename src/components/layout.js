@@ -17,13 +17,14 @@ const Layout = ({ children }) => {
           site {
             siteMetadata {
               title
+              description
             }
           }
         }
       `}
       render={data => (
-        <div style={{ minHeight: '100vh', backgroundColor: '#FFF' }}>
-          <Header siteTitle={data.site.siteMetadata.title} />
+        <div style={{ minHeight: '100vh', backgroundColor: 'hsla(50, 100%, 92%, 0.1)' }}>
+          <Header siteTitle={data.site.siteMetadata.title} siteDescription={data.site.siteMetadata.description} />
           <div
             style={{
               margin: `0 auto`,

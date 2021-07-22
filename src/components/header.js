@@ -11,7 +11,8 @@ import List from '@material-ui/core/List'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+// import MenuIcon from '@material-ui/icons/Menu'
+import PetsIcon from '@material-ui/icons/Pets'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ListItem from '@material-ui/core/ListItem'
@@ -76,7 +77,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 0,
   },
 }))
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, siteDescription }) => {
   const classes = useStyles()
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)
@@ -104,10 +105,13 @@ const Header = ({ siteTitle }) => {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />
+            <PetsIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit">
+          <Typography variant="h5">
             {siteTitle}
+          </Typography>
+          <Typography variant="h6">
+            {siteDescription}
           </Typography>
         </Toolbar>
       </AppBar>

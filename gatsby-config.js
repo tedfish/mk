@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Menu Kitty`,
+    title: `MENU KITTY`,
     description: `An easy way to browse & enjoy your favorite menus!`,
     author: `@tedfish`,
   },
