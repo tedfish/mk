@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Image from '../components/image'
+import Search from '../components/search'
 import SEO from '../components/seo'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
@@ -43,7 +44,8 @@ const IndexPage = () => {
   }
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Menu Kitty" />
+      <Search />
       <Grid container spacing={3} justifyContent="center">
         <Grid item xs={2}>
           <div style={{ maxWidth: `400px`, marginBottom: `1.45rem` }}>

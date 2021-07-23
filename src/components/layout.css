@@ -627,11 +627,12 @@ pre tt:after {
 }
 /* custom */
 header h5 {
-  color: rgba(255,255,255,0.5);
+  color: rgb(250, 225, 1);
   padding-right: 1em;
   font-weight: 800 !important;
 }
 header h6 {
-  font-weight: 300 !important;
+  font-weight: 500 !important;
   font-size: 1rem !important;
+  color: rgba(10, 1, 1, 0.5);
 }
