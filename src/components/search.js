@@ -55,7 +55,7 @@ export default function FreeSoloCreateOptionDialog() {
     <Box
       boxShadow={1}
       style={styles.searchBox}
-      mb={15}
+      mb={3}
     >
       <Box
         pt={20}

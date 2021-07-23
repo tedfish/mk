@@ -20,6 +20,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
+import Container from '@material-ui/core/Container';
 const drawerWidth = 240
 const useStyles = makeStyles(theme => ({
   root: {
@@ -96,6 +97,7 @@ const Header = ({ siteTitle, siteDescription }) => {
           [classes.appBarShift]: open,
         })}
       >
+        <Container maxWidth="lg">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -113,6 +115,7 @@ const Header = ({ siteTitle, siteDescription }) => {
             {siteDescription}
           </Typography>
         </Toolbar>
+        </Container>
       </AppBar>
       <Drawer
         className={classes.drawer}
