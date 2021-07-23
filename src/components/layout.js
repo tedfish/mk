@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
             }}
           >
             <main>{children}</main>
-            <footer style={{ paddingTop: 10 }}>
+            <footer style={{ textAlign: 'center', paddingTop: '150px' }}>
               © {new Date().getFullYear()} |  All rights reserved | Menu Kitty.
             </footer>
           </div>

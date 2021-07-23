@@ -627,7 +627,7 @@ pre tt:after {
 }
 /* custom */
 header h5 {
-  color: rgb(250, 225, 1);
+  color: #FDF9E7;
   padding-right: 1em;
   font-weight: 800 !important;
 }
