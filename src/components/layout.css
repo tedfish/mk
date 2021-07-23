@@ -620,11 +620,6 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 /* custom */
 header h5 {
   color: #FDF9E7;
@@ -633,6 +628,14 @@ header h5 {
 }
 header h6 {
   font-weight: 500 !important;
-  font-size: 1rem !important;
+  font-size: .8rem !important;
   color: rgba(10, 1, 1, 0.5);
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+  header h6 {
+    display: none;
+  }
 }
