@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-material-ui",
+  "name": "menu-kitty",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby and Material UI",
+  "description": "Menus",
   "version": "0.1.0",
-  "author": "Dominic Abela <djmabela@gmail.com>",
+  "author": "TDN <toyota@gmail.com>",
   "dependencies": {
     "@auth0/auth0-react": "^1.6.0",
     "@autocomplete/material-ui": "^0.0.17",
