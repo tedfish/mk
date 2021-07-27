@@ -12,7 +12,6 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
 // import MenuIcon from '@material-ui/icons/Menu'
-import PetsIcon from '@material-ui/icons/Pets'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ListItem from '@material-ui/core/ListItem'
@@ -20,7 +19,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
-import Container from '@material-ui/core/Container';
+import Container from '@material-ui/core/Container'
+import { StaticImage } from "gatsby-plugin-image"
 const drawerWidth = 240
 const useStyles = makeStyles(theme => ({
   root: {
@@ -106,7 +106,8 @@ const Header = ({ siteTitle, siteDescription }) => {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <PetsIcon />
+            <StaticImage src="https://menukitty.com/mk.png" alt="A kitten" style={{ width: "50px", height: "50px", gridArea: "1/1", borderRadius: "50%"
+        }} />
           </IconButton>
           <Typography variant="h5">
             {siteTitle}
