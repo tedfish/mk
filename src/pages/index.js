@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import firebase from "./components/firebase";
-import ItemList from "./components/itemlist";
-import AddItemForm from "./components/additemform";
-import "./styles/global.css";
-import UpdateItem from "./components/updateitem";
-export default () => {
+import Layout from '../components/layout'
+import Search from '../components/search'
+import Features from '../components/features'
+import Seo from '../components/seo'
+import firebase from "../components/firebase"
+import ItemList from "../components/itemlist"
+import AddItemForm from '../components/additemform'
+import UpdateItem from "../components/updateitem";
+import Container from '@material-ui/core/Container';
+// import { makeStyles } from '@material-ui/core/styles'
+const IndexPage = () => {
   const initialItemState = [
     { id: null, name: "", type: "", qty: "", description: "" }
   ];
-
   const [editing, setEditing] = useState(false);
-
   const [currentItem, setCurrentItem] = useState(initialItemState);
-
   const editItem = item => {
     setEditing(true);
     setCurrentItem({
@@ -23,7 +25,6 @@ export default () => {
       description: item.description
     });
   };
-
   const updateItem = ({ currentItem }, updatedItem) => {
     console.log(
       "It send the item to the updated item function:",
@@ -37,11 +38,25 @@ export default () => {
       .doc(currentItem.id)
       .update(updatedItem);
   };
-
+  // firebase
+  //   .firestore()
+  //   .collection("items")
+  //   .add({
+  //     name: "Heineken",
+  //     type: "beer",
+  //     qty: 5,
+  //     description:
+  //       "Pale lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken International",
+  //   })
+  //   .then(ref => {
+  //     console.log("Added document with ID: ", ref.id)
+  //   })
   return (
-    <div>
-      <h1>Firestore CRUD App</h1>
-      <h2>Item List</h2>
+    <Layout>
+      <Seo title="Easy - Useful - Fun" />
+      <Search />
+      <Features />
+      <Container>
       <ItemList editItem={editItem} />
       <h2>Add Item</h2>
       {editing ? (
@@ -53,6 +68,8 @@ export default () => {
       ) : (
         <AddItemForm />
       )}
-    </div>
-  );
-};
+      </Container>
+    </Layout>
+  )
+}
+export default IndexPage
