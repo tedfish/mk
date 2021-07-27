@@ -4,7 +4,7 @@ import "../styles/global.css";
 const useItems = () => {
   const [items, setItems] = useState([]); //useState() hook, sets initial state to an empty array
   useEffect(() => {
-    firebase
+    const unsubscribe = firebase
       .firestore() //access firestore
       .collection("items") //access "items" collection
       .onSnapshot(snapshot => {
@@ -16,22 +16,18 @@ const useItems = () => {
         }));
         setItems(listItems); //items is equal to listItems
       });
-      const unsubscribe = firebase
-      .firestore() 
-      .collection("items") 
-      .onSnapshot(snapshot => {
-        const listItems = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-        }))
-        setItems(listItems)
-      })
-      //called the unsubscribe--closing connection to Firestore.
-    return () => unsubscribe()
+    return () => unsubscribe();
   }, []);
   return items;
 };
-const ItemList = () => {
+const deleteItem = id => {
+  firebase
+    .firestore()
+    .collection("items")
+    .doc(id)
+    .delete();
+};
+const ItemList = ({ editItem }) => {
   const listItem = useItems();
   return (
     <table className="tg">
@@ -41,6 +37,7 @@ const ItemList = () => {
           <td className="tg-ycr8">Type</td>
           <td className="tg-i81m">Qty</td>
           <td className="tg-a02x">Description</td>
+          <td class="tg-6hdc"></td>
         </tr>
       </tbody>
       {listItem.map(item => (
@@ -50,6 +47,10 @@ const ItemList = () => {
             <td className="tg-ycr8">{item.type}</td>
             <td className="tg-i81m">{item.qty}</td>
             <td className="tg-a02x">{item.description}</td>
+            <td class="tg-6hdc">
+              <button onClick={() => editItem(item)}>Edit</button>
+              <button onClick={() => deleteItem(item.id)}>Delete</button>
+            </td>
           </tr>
         </tbody>
       ))}
