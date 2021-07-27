@@ -2,9 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -47,7 +45,7 @@ export default function MediaCard() {
             <CardActionArea>
               <CardContent>
                 <Typography gutterBottom variant="h6">
-                  Beautiful printed, useful, and easy
+                  Beautiful printed & digital layouts
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Choose from a variety of configurable templates to view on your device or print
