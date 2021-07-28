@@ -5,6 +5,31 @@ module.exports = {
     author: `@tedfish`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-firestore',
+      options: {
+        credential: require("./firebase.json"),
+        types: [
+          {
+            type: 'Menus',
+            collection: 'Menu',
+            map: doc => ({
+              name: doc.name,
+              phone: doc.phone,
+            }),
+          },
+          {
+            type: 'Author',
+            collection: 'authors',
+            map: doc => ({
+              name: doc.name,
+              country: doc.country,
+              books___NODE: doc.books.map(book => book.id),
+            }),
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
