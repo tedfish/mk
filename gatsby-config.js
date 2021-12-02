@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `MENU KITTY`,
-    description: `An easy way to browse & enjoy your favorite menus!`,
+    description: `An easy way to browse, print, display, and build restaurant menus`,
     author: `@tedfish`,
   },
   plugins: [
@@ -11,23 +11,14 @@ module.exports = {
         credential: require("./firebase.json"),
         types: [
           {
-            type: 'Menus',
-            collection: 'Menu',
+            type: 'Menu',
+            collection: 'menus',
             map: doc => ({
               name: doc.name,
-              phone: doc.phone,
-            }),
-          },
-          {
-            type: 'Author',
-            collection: 'authors',
-            map: doc => ({
-              name: doc.name,
-              country: doc.country,
-              books___NODE: doc.books.map(book => book.id),
-            }),
-          },
-        ],
+              phone: doc.phone
+            })
+          }
+        ]
       },
     },
     `gatsby-plugin-react-helmet`,

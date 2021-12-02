@@ -31,7 +31,8 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'linear-gradient(to right,  #768de6, #9ed691)',
+    // background: 'linear-gradient(to right,  #768de6, #9ed691)',
+    background: '#9ed691',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -109,10 +110,10 @@ const Header = ({ siteTitle, siteDescription }) => {
             <StaticImage src="https://menukitty.com/mk.png" alt="A kitten" style={{ width: "50px", height: "50px", gridArea: "1/1", borderRadius: "50%"
         }} />
           </IconButton>
-          <Typography variant="h5">
+          <Typography className="logo">
             {siteTitle}
           </Typography>
-          <Typography variant="h6">
+          <Typography className="tagline">
             {siteDescription}
           </Typography>
         </Toolbar>
