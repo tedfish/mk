@@ -1,17 +1,33 @@
 .MuiContainer-root .logo {
   font-size: 15px;
-  font-weight: 800;
-  letter-spacing: .25em;
   margin-right: 1em;
+  line-height: 1em;
+  text-transform: uppercase;
 }
+.MuiContainer-root .logo strong {
+  display: block;
+  font-size: 1.5em;
+}
+
 .MuiContainer-root .tagline {
   font-size: 10px;
   font-weight: 400;
+}
+.mk-scroll {
+  background: white;
+  overflow: scroll;
+  max-height: 80vh;
+  border: 5px solid rgba(0, 0, 0, 0.05);
+  padding: 2em;
+}
+.breadcrumbMenu a, .breadcrumbMenu p {
+  font-size: .6rem;
 }
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
   border-color: #000000;
+
 }
 .tg td {
   font-family: Arial, sans-serif;

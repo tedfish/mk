@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     // background: 'linear-gradient(to right,  #768de6, #9ed691)',
-    background: '#9ed691',
+    background: '#583262',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -107,11 +107,11 @@ const Header = ({ siteTitle, siteDescription }) => {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <StaticImage src="https://menukitty.com/mk.png" alt="A kitten" style={{ width: "50px", height: "50px", gridArea: "1/1", borderRadius: "50%"
+            <StaticImage src="https://menukitty.com/mk.png" alt="A kitten" style={{ width: "30px", height: "30px", gridArea: "1/1", borderRadius: "50%", margin: "10px"
         }} />
           </IconButton>
           <Typography className="logo">
-            {siteTitle}
+            <strong>Menu</strong>Kitty
           </Typography>
           <Typography className="tagline">
             {siteDescription}

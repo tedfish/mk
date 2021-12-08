@@ -3,59 +3,53 @@ import Layout from '../components/layout'
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box'
-
 import Seo from '../components/seo'
-import "../styles/global.css";
-
+import IconBreadcrumbs from '../components/breadcrumbMenu';
+import ActionsMenu from '../components/actionsMenu';
+import CardRestaurant from '../components/cardRestaurant';
+import CardMenuItem from '../components/cardMenuItem';
+import '../styles/global.css';
 const SecondPage = () => (
   <Box
-        mt={8}
-        pb={20}
-      >
-<Layout>
-    <Seo title="Che Dessert" />
-    <Container maxWidth="lg">
-      <Grid container spacing={3}>
-        <Grid item lg={3} sm={3}>
-        <h1 m={5}>Che Dessert</h1>
-      <p>Service options: Takeout
-        Located in: King Plaza
-        Address: 7101 Martin Luther King Jr Way S #102, Seattle, WA 98118
-        You visited in July
+    mt={12}
+  >
+    <Layout>
+      <Seo title="Che Dessert" />
+      <Container maxWidth="xl">
+        <Grid container spacing={3}>
+          <Grid item lg={4} sm={12}>
+            <IconBreadcrumbs />
+            <CardRestaurant />
+          </Grid>
+          <Grid item lg={8} sm={12}>
+          <ActionsMenu />
 
-
-        Hours:
-        Open ⋅ Closes 5:30PM
-        Updated by business 2 weeks ago
-        Health & safety: Mask required · Staff wear masks · Staff get temperature checks · Staff required to disinfect surfaces between visits · Safety dividers at checkout · More details
-        Phone: (206) 946-6570</p>
+            <div className="mk-scroll">
+              
+            <h2>Street Foods</h2>
+                <Grid container spacing={3}>
+                  <Grid item md={6} sm={12}>
+                    <CardMenuItem name="Shrimp Dumpling" description="Shrimp wrapped in a thin rice dough and steamed" image="https://images.unsplash.com/photo-1531950110602-9c09c9102fdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" />
+                  </Grid>
+                  <Grid item md={6} sm={12}>
+                    <CardMenuItem name="Mixed Butter Young Corn" description="Shrimp wrapped in a thin rice dough and steamed" image="https://images.unsplash.com/photo-1559329255-2e7cb2e21ca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
+                  </Grid>
+                  <Grid item md={6} sm={12}>
+                    <CardMenuItem name="Fried Rice Cake with Eggs" description="Shrimp wrapped in a thin rice dough and steamed" image="https://images.unsplash.com/photo-1524903703642-0a6a52e5d24d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80" />
+                  </Grid>
+                  <Grid item md={6} sm={12}>
+                    <CardMenuItem name="Spicy Mixed Rice Paper" description="Shrimp wrapped in a thin rice dough and steamed" image="https://images.unsplash.com/photo-1541014741259-de529411b96a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2748&q=80" />
+                  </Grid>
+                </Grid>
+                <h2>Entrees</h2>
+                <h2>Desserts</h2>
+                <h2>Beverages</h2>
+              
+            </div>
+          </Grid>
         </Grid>
-        <Grid item lg={9} sm={3}>
-        <h2>Menu Style</h2>
-      Fine Dining
-      Modern
-      Take-Out
-      Nutrition
-      <button>Print</button>
-      <div>
-        <h2>Appetizers</h2>
-        <ul>
-          <li className="mk-name">Cheese Bread</li>
-          <li className="mk-price">$2.42</li>
-          <li className="mk-description">Cheese Bread lorem ipsum</li>
-        </ul>
-        <h2>Entrees</h2>
-        <h2>Desserts</h2>
-        <h2>Beverages</h2>
-      </div>
-        </Grid>
-      </Grid>
-      
-      
-    </Container>
-
-  </Layout>
-      </Box>
-  
+      </Container>
+    </Layout>
+  </Box>
 )
 export default SecondPage

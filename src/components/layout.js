@@ -23,12 +23,12 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <div style={{ minHeight: '100vh', backgroundColor: 'hsla(50, 100%, 92%, 0.5)' }}>
+        <div style={{ minHeight: '100vh' }}>
           <Header siteTitle={data.site.siteMetadata.title} siteDescription={data.site.siteMetadata.description} />
           <div
             style={{
               margin: `0 auto`,
-              marginTop: 50,
+              marginTop: 0,
             }}
           >
             <main>{children}</main>
