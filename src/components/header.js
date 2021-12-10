@@ -155,6 +155,14 @@ const Header = ({ siteTitle, siteDescription }) => {
               <ListItemText>Components</ListItemText>
             </ListItem>
           </Link>
+          <Link to="/ideas">
+            <ListItem button>
+              <ListItemIcon>
+                <ListIcon />
+              </ListItemIcon>
+              <ListItemText>Ideas</ListItemText>
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
     </div>

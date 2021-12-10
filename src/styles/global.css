@@ -1,3 +1,46 @@
+.menuItemHeader {
+  background: rgba(201, 163, 206, 0.4);
+}
+.MuiCardHeader-title {
+  color: #f95508;
+  font-weight: 800;
+}
+.MuiCardHeader-subheader {
+  color: #000;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  color: #f95508;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+.fancy span:before,
+.fancy span:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #f95508;
+  border-top: 1px solid #f95508;
+  top: 0;
+  width: 200px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+.MuiAccordionSummary-root {
+  background-color: rgba(201, 163, 206, 0.125);
+  
+}
 .MuiContainer-root .logo {
   font-size: 15px;
   margin-right: 1em;
@@ -14,20 +57,30 @@
   font-weight: 400;
 }
 .mk-scroll {
-  background: white;
+  background: #f3f3f3;
   overflow: scroll;
   max-height: 80vh;
   border: 5px solid rgba(0, 0, 0, 0.05);
-  padding: 2em;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.25);
 }
-.breadcrumbMenu a, .breadcrumbMenu p {
-  font-size: .6rem;
+.mk-scroll h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+.mk-scroll img {
+  margin-bottom: 0;
+}
+.breadcrumbMenu a,
+.breadcrumbMenu p {
+  font-size: 0.6rem;
 }
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
   border-color: #000000;
-
 }
 .tg td {
   font-family: Arial, sans-serif;

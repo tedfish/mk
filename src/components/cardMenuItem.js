@@ -6,15 +6,12 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -25,29 +22,21 @@ const ExpandMore = styled((props) => {
     duration: theme.transitions.duration.shortest,
   }),
 }));
-
 export default function CardMenuItem(props) {
   const [expanded, setExpanded] = React.useState(false);
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
   return (
     <Card>
       <CardMedia
-    component="img"
-    image={props.image}
-    alt="CardMedia Image Example"
-    height="300"
-    title="CardMedia Image Example"
-  />
+        component="img"
+        image={props.image}
+        alt="CardMedia Image Example"
+        height="400"
+        title="CardMedia Image Example"
+      />
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
@@ -55,10 +44,11 @@ export default function CardMenuItem(props) {
         }
         title={props.name}
         subheader={props.description}
+        className="menuItemHeader"
       />
-     
       <CardContent>
         <Typography variant="body2" color="text.secondary">
+          <strong>{props.price}</strong>
           This impressive paella is a perfect party dish and a fun meal to cook
           together with your guests. Add 1 cup of frozen peas along with the mussels,
           if you like.
